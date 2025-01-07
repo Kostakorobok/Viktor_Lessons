@@ -118,9 +118,9 @@ while(lives > 0 and "_" in word):
     print(f"Lives left:{lives}")
 if "_" not in word:
     print(word)
-    print("You win!")
+    input("You win!\nPress Enter to exit")
 else:
-  print(f"{stages[0]}\nGame over")
+  input(f"{stages[0]}\nGame over\nPress Enter to exit")
 
 
   
