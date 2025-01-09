@@ -2,9 +2,7 @@
 
 from tic_tac_toe_functions import row_column_input
 from tic_tac_toe_functions import welcome_message
-#from tic_tac_toe_function import hor_win
-#from tic_tac_toe_function import ver_win
-#from tic_tac_toe_function import dia_win
+
 
 game_on = True
 
@@ -32,8 +30,16 @@ while (game_on):
     print("Player 1 (X) tern\n")
     row, col = row_column_input()
     board[row][col] = "X" 
-    for column in board:
-        if column[0] == column[1] == column[2] and column[0] != " ": print("Game Over")
+    for i in board:
+        if i[0] == i[1] == i[2] and i[0] != " ": 
+            print("Player 1 wins\n")
+            game_on = False
+            break
+    for i in range(3):
+        if board[0][i] == board[1][i] == board[2][i] and board[0][i] != " ":
+            print("Player 1 wins\n")
+            game_on - False
+            break
 
     for i in board:
         print(" | ".join(i))
@@ -42,6 +48,10 @@ while (game_on):
     print("Player 2 (O) tern\n")
     row, col = row_column_input()
     board[row][col] = "O" 
+    for i in board:
+        if i[0] == i[1] == i[2] and i[0] != " ": 
+            print("Player 2 wins\n")
+            break
 
     for row in board:
         print(" | ".join(row))
