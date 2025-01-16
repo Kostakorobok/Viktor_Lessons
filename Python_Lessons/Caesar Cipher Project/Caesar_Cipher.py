@@ -26,5 +26,26 @@ for i in range(0, len(secrete_word)):
 
 encrypted_word_str = "".join(encrypted_word_list)
 print(f"Original version: {secrete_word}\nEncrypted version: {encrypted_word_str}")
-input("Press Enter to exit")
+# input("Press Enter to exit")
 
+
+###ciepher -> decepher
+# encryption_factor
+# a -> f
+  # 
+decrypted_word_str = ""
+
+for i in range(0, len(encrypted_word_str)):
+  alphabet_index = alphabet.index(encrypted_word_str[i]) - encryption_factor
+  decrypted_word_str += alphabet[alphabet_index]
+  # decrypted_word_list.append(alphabet[alphabet_index])
+
+print(decrypted_word_str)
+
+# Homework 1:
+# 1 
+# choicAe decrypt or encrypt:
+# decrypt (multi -1) : -factor 
+# encrypt (multi 1) : +factor 
+# 2
+# while -> to repeat cypher
