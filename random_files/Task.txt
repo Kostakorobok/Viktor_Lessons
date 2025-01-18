@@ -1,0 +1,15 @@
+Task 1: Cities
+Create a dictionary named cities. Use the names of three cities as the keys of the dictionary. Create a nested dictionary for each city containing the following information:
+
+The country where the city is located (country).
+The approximate population of the city (population).
+One interesting fact about the city (fact).
+The keys of the nested dictionaries should be country, population, and fact. Print the name of each city along with all the stored information about it.
+
+
+Task 2: Sandwiches
+Create a list named sandwich_orders and fill it with the names of various types of sandwiches. Create an empty list named finished_sandwiches.
+
+Use a loop to iterate over the elements of the first list and print a message for each sandwich (e.g., "I made your tuna sandwich"). After processing each sandwich, move it from sandwich_orders to finished_sandwiches.
+
+Once all the sandwiches have been processed, print a message listing all the sandwiches that have been made.
