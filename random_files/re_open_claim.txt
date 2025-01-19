@@ -1,5 +1,73 @@
 1300 139 591
 ref 112950917 01 
 
-29th jan 12 pm
+29th jan, 12 pm
 
+Care automotive,
+
+Hire Car:
+14 days,
+
+https://www.w3schools.com/python/ref_dictionary_keys.asp
+https://www.w3schools.com/python/trypython.asp?filename=demo_ref_dictionary_keys
+
+Homework 1:
+
+logo = '''
+                         ___________
+                         \         /
+                          )_______(
+                          |"""""""|_.-._,.---------.,_.-._
+                          |       | | |               | | ''-.
+                          |       |_| |_             _| |_..-'
+                          |_______| '-' `'---------'` '-'
+                          )"""""""(
+                         /_________\\
+                       .-------------.
+                      /_______________\\
+'''
+print(logo)
+
+def ft_find_max(dictionary):
+  max = 0 # find max price for winnerin dictinary
+  bidder_name = "" # find bidder
+  for key, value in dictionary.items(): # convert to list
+    if value > max: # dictionary[bidder] : key -bidder, value - dictionary[bidder]
+      max = value # if changes ->then change 
+      bidder_name = key # change name !!!
+  print(bidder_name, max) #print them together
+
+
+user_name = input("Enter name:\n")
+bid_price = int(input("Enter first bid:\n$ "))
+
+bids = {}
+bids[user_name] = bid_price
+
+# user_choice = input("Is there are another user who wants to bid?\n(Y) Yes (N) No:").lower()
+
+# if user_choice == "y":
+#   pass
+# if user_choice == "n":
+#   pass
+# else:
+#   print("Wrong input try again")
+
+ft_find_max(bids)
+
+
+
+
+# car = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+
+# x = list(car.keys())
+# y = list(car.values())
+
+# print(x[0])
+# print(y[0])
+
+Homework 2:
