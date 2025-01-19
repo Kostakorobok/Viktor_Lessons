@@ -1,4 +1,3 @@
-# Caesar Cipher Incryptor
 import random
 
 logo = """
