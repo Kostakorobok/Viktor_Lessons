@@ -1,0 +1,182 @@
+def subtract(a, b):
+  '''This fucntion will subtract'''
+  return a - b
+
+def addition (a, b):
+  '''This will add'''
+  return a + b
+
+def division (a, b):
+  '''This will divide'''
+  if b == 0:
+    print("Error division by 0")
+    return 0
+  return a / b
+
+def multiplication (a, b):
+  '''This will multiply'''
+  return a * b
+
+operations = {
+  "-": subtract,
+  "+": addition, 
+  "/": division,
+  "*": multiplication
+}
+
+a = int(input("Plese input first number\n"))
+b = int(input("Plese input second number\n"))
+oper = input("Plese input operation\n")
+
+print(f"{(operations[oper](a, b))}")
+
+===========================================================================================
+
+############### Blackjack Project #####################
+############### Our Blackjack House Rules #####################
+
+## The deck is unlimited in size. 
+## There are no jokers. 
+## The Jack/Queen/King all count as 10.
+## The the Ace can count as 11 or 1.
+## Use the following list as the deck of cards:
+## cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+## The cards in the list have equal probability of being drawn.
+## Cards are not removed from the deck as they are drawn.
+## The computer is the dealer.
+
+##################### Hints #####################
+
+#Hint 1: Go to this website and try out the Blackjack game: 
+#   https://games.washingtonpost.com/games/blackjack/
+
+#Hint 2: Read this breakdown of program requirements: 
+#   http://listmoz.com/view/6h34DJpvJBFVRlZfJvxF
+#Then try to create your own flowchart for the program.  
+
+#Hint 3: Download and read this flow chart I've created: 
+#   https://drive.google.com/uc?export=download&id=1rDkiHCrhaf9eX7u7yjM1qwSuyEk-rPnt
+
+#Hint 4: Create a deal_card() function that uses the List below to *return* a random card.
+#11 is the Ace.
+#cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+
+
+#Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
+#user_cards = []
+#computer_cards = []
+
+#Hint 6: Create a function called calculate_score() that takes a List of cards as input 
+#and returns the score. 
+#Look up the sum() function to help you do this.
+
+#Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
+
+#Hint 8: Inside calculate_score() check for an 11 (ace). If the score is already over 21, remove the 11 and replace it with a 1. You might need to look up append() and remove().
+
+#Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
+
+#Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
+
+#Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
+
+#Hint 12: Once the user is done, it's time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17.
+
+#Hint 13: Create a function called compare() and pass in the user_score and computer_score. If the computer and user both have the same score, then it's a draw. If the computer has a blackjack (0), then the user loses. If the user has a blackjack (0), then the user wins. If the user_score is over 21, then the user loses. If the computer_score is over 21, then the computer loses. If none of the above, then the player with the highest score wins.
+
+#Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
+
+# https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+
+import random
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+user = []
+ai = []
+
+def deal_card():
+  card = random.choice(cards)
+  return card
+
+def set_cards(object):
+  for i in range(2):
+    object.append(deal_card())
+
+set_cards(user)
+set_cards(ai)
+
+print("ai and users cards: ")
+print(ai)
+print(user)
+
+###https://github.com/cecirio/100-days-of-code/blob/main/logs/day11/blackjack/main.py
+### https://github.com/LeeRenJie/100-days-of-code-in-python/blob/main/Day011-Blackjack.py
+
+
+###https://github.com/cecirio/100-days-of-code/blob/main/logs/day11/blackjack/main.py
+### https://github.com/LeeRenJie/100-days-of-code-in-python/blob/main/Day011-Blackjack.py
+
+# class Apple:
+#     def __init__(self, nseeds, juiceml):
+#         self.nseeds = nseeds # pin code - valiable creqated after this line 
+#         self.juiceml = juiceml
+#     #i =  1234 #without self - impossible to use that 
+#     def set_seeds(self, nseeds):
+#         self.nseeds = nseeds
+    
+#     def ft_nseeds(self):
+#         return self.nseeds
+
+#     def set_juiceml(self, juiceml):
+#         self.juiceml = juiceml
+    
+#     def ft_juiceml(self):
+#         return self.juiceml
+
+# # Apple
+# # self.nseeds
+# # self.juiceml
+# #
+
+# a = Apple(12, 35)
+# print(f"number of seeds : {a.ft_nseeds()}\nmlitres of juice : {a.ft_juiceml()}") 
+# print("after using function set_seeds :")
+# a.set_seeds(22)
+# print(f"number of seeds : {a.ft_nseeds()}\nmlitres of juice : {a.ft_juiceml()}") 
+
+# a.set_juiceml(750)
+# print(f"1 apple gives us {a.ft_juiceml()}ml of juice")
+
+
+class Dog:
+    def __init__(self, name):
+        self.name = name
+        self.tricks = []
+    
+    def add_trick(self, trick):
+        self.tricks.append(trick)
+    def get_tricks(self):
+        return self.tricks
+
+f = Dog('Fido')
+b = Dog('Buddy')
+f.add_trick('roll over')
+b.add_trick('play dead')
+# jump
+f.add_trick("jump")
+f.add_trick("sit")
+f.add_trick("bark")
+
+b.add_trick("jump")
+b.add_trick("sit")
+b.add_trick("bark")
+# sit
+# bark 
+ # object and list ...
+print(b.get_tricks())
+               # unexpectedly shared by all dogs
+
+for i in range(0, len(f.get_tricks())):
+    print(f.get_tricks()[i])
