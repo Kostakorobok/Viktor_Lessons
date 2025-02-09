@@ -10,23 +10,8 @@
 
 # 8-7. Album.
 
-def make_album(artist, album_name, n_tracks, release_date, k_rating = ""):
-    if k_rating:
-        album = {
-            "artist": artist,
-            "album name": album_name,
-            "number of tracks": n_tracks,
-            "release date": release_date,
-            "KERANG rating": k_rating
-            }
-    else:
-        album = {
-        "artist": artist,
-        "album name": album_name,
-        "number of tracks": n_tracks,
-        "release date": release_date,
-        }
-    return album
+# import functions0 as func
+from functions0 import make_album as func_album
 
 albums = []
 
@@ -47,7 +32,7 @@ while True:
     if in_k_rating == 'q':
         break
 
-    albums.append(make_album(in_artist, in_album_name, in_n_tracks, in_release_date, in_k_rating))
+    albums.append(func_album(in_artist, in_album_name, in_n_tracks, in_release_date, in_k_rating))
     
     for i in albums:
         for j, k in i.items():

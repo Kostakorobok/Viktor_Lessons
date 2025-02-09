@@ -12,19 +12,10 @@
 # for i in completed_models:
 #     print(i)
 
-def ft_print_models(unfinished, finished):
-    while unfinished:
-        current = unfinished.pop()
-        print(f"Printing: {current}")
-        finished.append(current)
-
-def ft_show_completed(finished):
-    print("The following been completed:")
-    for i in finished:
-        print(i.title())
+import printing_functions as print
 
 unprinted_designs = ["phone case", "robot pendant", "dodecahedron"]
 completed_models = []
 
-ft_print_models(unprinted_designs, completed_models)
-ft_show_completed(completed_models)
+print.ft_print_models(unprinted_designs, completed_models)
+print.ft_show_completed(completed_models)
